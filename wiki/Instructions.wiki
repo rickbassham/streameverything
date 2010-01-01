@@ -88,7 +88,7 @@ If you are behind a NAT firewall, you need to change the following line in strea
 {{{
 <PREF NAME="alt_transport_src_ipaddr" ></PREF>
 }}}
-to:
+to (replace 123.45.67.8 with your public IP address):
 {{{
 <PREF NAME="alt_transport_src_ipaddr" >123.45.67.8</PREF>
 }}}
