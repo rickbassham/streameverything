@@ -3,6 +3,7 @@ error_reporting(E_ERROR);
 
 $basedir = "/mnt/Videos";
 $pidfile = "/tmp/vlc";
+$servername = "www.rickbassham.com:8082";
 $transcode = "--sout='#transcode{soverlay,ab=48,samplerate=44100,channels=1,acodec=mp4a,vcodec=h264,width=512,height=288,vfilter=\"canvas{width=512,height=288,aspect=16:9}\",fps=25,vb=384,venc=x264{vbv-bufsize=200,partitions=all,level=12,no-cabac,subme=7,threads=4,ref=2,mixed-refs=1,bframes=0,min-keyint=1,keyint=50,qpmax=51}}:gather:rtp{mp4a-latm,dst=127.0.0.1,port-audio=20000,port-video=20002,ttl=127,sdp=file:/usr/local/movies/movie.sdp}'";
 
 function run_in_background($Command, $Priority = 0) {
@@ -82,7 +83,7 @@ if (!is_null($f)) {
 
 	$command = "vlc --pidfile=$pidfile -d \"$f\" $transcode";
 	run_in_background($command);
-	echo "<a href=\"rtsp://www.rickbassham.com:8082/movie.sdp\">Watch Now</a>\n";
+	echo "<a href=\"rtsp://$servername/movie.sdp\">Watch Now</a>\n";
 	echo "<a href=\"$page?dir=".htmlentities(dirname($f), ENT_COMPAT, "ISO-8859-1")."\">Stop</a>\n";
 	echo "</div>\n";
 }
