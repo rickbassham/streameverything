@@ -21,7 +21,7 @@ sudo apt-get -q update
 sudo apt-get --yes -q --allow-unauthenticated install medibuntu-keyring
 sudo apt-get -q update
 sudo apt-get upgrade
-sudo aptitude install apache2 openssh-server samba smbfs php5-ffmpeg libapache2-mod-php5 ffmpeg libavcodec-extra-52 vlc
+sudo aptitude install apache2 openssh-server samba smbfs php5-ffmpeg libapache2-mod-php5 ffmpeg libavcodec-extra-52 vlc build-essential
 }}}
 
 == Install Darwin Streaming Server ==
