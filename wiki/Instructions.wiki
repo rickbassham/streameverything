@@ -62,7 +62,7 @@ _These settings work for streaming to the Motorola DROID.  You may need to tweak
 
 == Set Up Apache ==
   # Browse to http://servername/ to ensure your Apache setup is working. If you don't see a message saying "It Works!", stop and figure out what went wrong.
-  # Download the index.php file from this site, and place it in /var/www.
+  # Download the [http://code.google.com/p/streameverything/source/browse/trunk/index.php index.php] file from this site, and place it in /var/www.
   # Restart Apache to make sure PHP is loaded: `sudo /etc/init.d/apache2 reload`.
   # Ensure your www-data user can write to /usr/local/movies.
   # Edit the index.php file: set the $basedir variable to be the path to your videos.  Set the $transcode variable to be whatever you needed to tweak the vlc settings to be.
