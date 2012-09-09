@@ -29,19 +29,19 @@ sudo aptitude install apache2 openssh-server samba smbfs php5-ffmpeg libapache2-
 {{{
 sudo addgroup --system qtss
 sudo adduser --system --no-create-home --ingroup qtss qtss
-wget http://static.macosforge.org/dss/downloads/DarwinStreamingSrvr6.0.3-Source.tar
+wget http://streameverything.googlecode.com/files/DarwinStreamingSrvr6.0.3-Source.tar
 tar -xvf DarwinStreamingSrvr6.0.3-Source.tar
-wget http://dss.macosforge.org/trac/raw-attachment/ticket/6/dss-6.0.3.patch
+wget http://streameverything.googlecode.com/files/dss-6.0.3.patch
 patch -p0 < dss-6.0.3.patch
-wget http://dss.macosforge.org/trac/raw-attachment/ticket/6/dss-hh-20081021-1.patch
+http://streameverything.googlecode.com/files/dss-hh-20080728-1.patch
 patch -p0 < dss-hh-20081021-1.patch
 cd DarwinStreamingSrvr6.0.3-Source
 mv Install Install.orig
-wget http://dss.macosforge.org/trac/raw-attachment/ticket/6/Install
+wget http://streameverything.googlecode.com/files/Install
 chmod +x Install
 ./Buildit
 sudo ./Install
-wget http://dss.macosforge.org/trac/raw-attachment/ticket/6/darwin-streaming-server
+wget http://streameverything.googlecode.com/files/darwin-streaming-server
 chmod +x darwin-streaming-server
 sudo cp darwin-streaming-server /etc/init.d/darwin-streaming-server
 sudo update-rc.d darwin-streaming-server defaults
