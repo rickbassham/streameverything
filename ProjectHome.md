@@ -1,0 +1,1 @@
+Instructions for creating a streaming server at home to stream all your videos anywhere.  Works with the DROID by Motorola.
